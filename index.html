@@ -47,10 +47,67 @@
     <div class="container">
 
       <div class="columns">
+
         <div class="column is-mobile is-one-quarter-tablet">
           <div class="tile is-parent">
             <article class="tile is-child box">
+            	<div class="overlay add-session">
+            		<div class="overlay-text"> + </div>
+            	</div>
               <div class="content">
+              	<div class="status-bar">
+              		<i class="fa fa-star-o favorite" id="favorite" aria-hidden="true"></i>
+              	</div>
+                <p class="title">Session</p>
+                <div class="columns is-flex">
+                  <div class="column is-3">
+                    <div class="circle circle-grey"></div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="circle circle-grey"></div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="circle circle-grey"></div>
+                  </div>
+                  <div class="column is-3">
+                    <div class="circle circle-grey"></div>
+                  </div>
+                </div>
+                <div class="columns is-flex">
+                  <div class="column">
+                    <div class="circle circle-grey"></div>
+                  </div>
+                  <div class="column">
+                    <div class="circle circle-grey"></div>
+                  </div>
+                  <div class="column">
+                    <div class="circle circle-grey"></div>
+                  </div>
+                  <div class="column">
+                    <div class="circle circle-grey"></div>
+                  </div>
+                </div>
+                <div class="columns control-row is-flex">
+                  <div class="column box control-bar"></div>
+                    <div class="control-play is-flex">
+                      <i class="fa fa-play fa-5" aria-hidden="true"></i>
+                    </div>
+                  </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="column is-mobile is-one-quarter-tablet">
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+            	<div class="overlay session">
+            		<div class="overlay-text"> + </div>
+            	</div>
+              <div class="content">
+              	<div class="status-bar">
+              		<i class="fa fa-star-o favorite" id="favorite" aria-hidden="true"></i>
+              	</div>
                 <p class="title">Session #1</p>
                 <div class="columns is-flex">
                   <div class="column is-3">
@@ -80,12 +137,17 @@
                     <div class="circle circle-blue"></div>
                   </div>
                 </div>
-
+                <div class="columns control-row is-flex">
+                  <div class="column box control-bar"></div>
+                    <div class="control-play is-flex">
+                      <i class="fa fa-play fa-5" aria-hidden="true"></i>
+                    </div>
+                  </div>
               </div>
             </article>
           </div>
         </div>
-
+        
         <div class="column is-mobile is-one-quarter-tablet">
           <div class="tile is-parent">
             <article class="tile is-child box">
@@ -164,6 +226,9 @@
           </div>
         </div>
 
+      </div>
+
+      <div class="columns">
         <div class="column is-mobile is-one-quarter-tablet">
           <div class="tile is-parent">
             <article class="tile is-child box">
@@ -202,9 +267,7 @@
             </article>
           </div>
         </div>
-      </div>
 
-      <div class="columns">
         <div class="column is-mobile is-one-quarter-tablet">
           <div class="tile is-parent">
             <article class="tile is-child box">
@@ -321,45 +384,6 @@
             </article>
           </div>
         </div>
-
-        <div class="column is-mobile is-one-quarter-tablet">
-          <div class="tile is-parent">
-            <article class="tile is-child box">
-              <div class="content">
-                <p class="title">Session #8</p>
-                <div class="columns is-flex">
-                  <div class="column is-3">
-                    <div class="circle circle-grey"></div>
-                  </div>
-                  <div class="column is-3">
-                    <div class="circle circle-grey"></div>
-                  </div>
-                  <div class="column is-3">
-                    <div class="circle circle-grey"></div>
-                  </div>
-                  <div class="column is-3">
-                    <div class="circle circle-grey"></div>
-                  </div>
-                </div>
-                <div class="columns is-flex">
-                  <div class="column">
-                    <div class="circle circle-blue"></div>
-                  </div>
-                  <div class="column">
-                    <div class="circle circle-blue"></div>
-                  </div>
-                  <div class="column">
-                    <div class="circle circle-blue"></div>
-                  </div>
-                  <div class="column">
-                    <div class="circle circle-blue"></div>
-                  </div>
-                </div>
-
-              </div>
-            </article>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -369,6 +393,7 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
+        <i class="fa fa-star-o favorite favorite-modal" id="favorite" aria-hidden="true"></i>
         <input class="modal-card-title input input-modal" type="text" placeholder="Session #"></input>
       </header>
       <section class="modal-card-body">
@@ -414,6 +439,9 @@
       <footer class="modal-card-foot">
         <button class="button is-success close-modal">Publish</button>
         <button class="button close-modal">Cancel</button>
+        <div class="is-flex modal-footer-icons">
+        	<i class="fa fa-trash-o" aria-hidden="true"></i>
+        </div>
       </footer>
     </div>
   </div>
