@@ -33,11 +33,11 @@ $('.favorite').on('click', function () {
 
 	function handler(){
 	  if(!open){
-	    // this.innerHTML = "Close";
+	    // this.innerHTML = "Test";
 	    classie.add(wrapper, 'opened-nav');
 	  }
 	  else{
-	    // this.innerHTML = "Menu";
+	    // this.innerHTML = "Test";
 		classie.remove(wrapper, 'opened-nav');
 	  }
 	  open = !open;
