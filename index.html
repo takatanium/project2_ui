@@ -7,7 +7,9 @@
   <title>Sequencer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="component2.css" />
   <link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="modernizr-2.6.2.min.js"></script>
 </head>
 <body>
   
@@ -426,7 +428,23 @@
       <section class="modal-card-body">
         <div class="columns is-flex">
           <div class="column is-3">
-            <div class="circle circle-grey circle-modal"></div>
+          	<div class="note-div">
+            <div class="circle circle-grey circle-modal cn-button" id="cn-button"></div>
+				<div class="cn-wrapper" id="cn-wrapper">
+					<ul>
+						<li><a href="#"><span>C</span></a></li>
+						<li><a href="#"><span>D</span></a></li>
+						<li><a href="#"><span>E</span></a></li>
+						<li><a href="#"><span>F</span></a></li>
+						<li><a href="#"><span>G</span></a></li>
+						<li><a href="#"><span>A</span></a></li>
+						<li><a href="#"><span>B</span></a></li>
+						<li><a href="#"><span>-</span></a></li>
+						<li><a href="#"><span>+</span></a></li>
+
+					 </ul>
+				</div>
+			</div>
           </div>
           <div class="column is-3">
             <div class="circle circle-grey circle-modal"></div>
@@ -474,6 +492,7 @@
   </div>
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="polyfills.js" src="script.js"></script>
   <script async type="text/javascript" src="script.js"></script>
 </body>
 </html>
