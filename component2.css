@@ -106,10 +106,6 @@
 	text-decoration: none;
 	font-size: 1.2em;
 	line-height: 2;
-/*	-webkit-transform: skew(-60deg) rotate(-75deg) scale(1);
-	-moz-transform: skew(-60deg) rotate(-75deg) scale(1);
-	-ms-transform: skew(-60deg) rotate(-75deg) scale(1);*/
-	/*transform: skew(-60deg) rotate(-75deg) scale(1);*/
 	-webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
 	-moz-transform: skew(-50deg) rotate(-70deg) scale(1);
 	-ms-transform: skew(-50deg) rotate(-70deg) scale(1);
@@ -117,15 +113,17 @@
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	pointer-events: auto;
+	cursor: pointer;
 }
 
 .csstransforms .cn-wrapper li a span {
 	position: relative;
-	top: -0.3em;
+	top: -0.2em;
 	display: block;
-	font-size: 2em;
-	font-weight: 700;
-	text-transform: uppercase;
+	font-size: 1.5em;
+	font-weight: 500;
+	/*text-transform: uppercase;*/
+	z-index: 20px;
 }
 
 .csstransforms .cn-wrapper li a:hover,

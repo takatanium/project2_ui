@@ -214,6 +214,28 @@ article:hover {
   background-color: lightblue;
 }
 
+#modal-key-table {
+  margin-bottom: 13px;
+}
+
+.modal-key-table-head {
+	padding-top: 0px !important;
+}
+
+#percussion-div {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.percussion-btn {
+	margin: auto !important;
+}
+
+.percussion-icon {
+	width: 15px;
+	height: 15px;
+}
+
 /*Navbar*/
 @media only screen and (max-width: 1024px) {
 	.navbar {
