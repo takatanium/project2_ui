@@ -218,12 +218,22 @@ article:hover {
 	cursor: pointer;
 }
 
-/*JQuery media query*/
-.sampleClass {
-	float: left;
-}
-@media only screen and (max-width: 800px) {
-	.sampleClass {
-		float: none;
+/*Navbar*/
+@media only screen and (max-width: 1024px) {
+	.navbar {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+
+	.navbar-start {
+		margin: auto !important;
+	}
+
+	#input-searcher-div {
+		flex: 1 !important;
+	}
+
+	#input-searcher {
+		width: 100% !important;
 	}
 }
