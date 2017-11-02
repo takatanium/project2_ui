@@ -41,7 +41,7 @@ $('.favorite').on('click', function () {
   }
 });
 
-$('.circle-modal').on('click', function () {
+$('.step-modal').on('click', function () {
 	if ($(this).hasClass('unclicked')) {
 		if ($('#step-selector').val().length !== 0) {
       $(this).html($('#step-selector').val());
