@@ -1,6 +1,6 @@
-.circle {
-	width: 20px;
-	height: 20px;
+.step {
+	width: 25px;
+	height: 25px;
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
 	border-radius: 50%;
@@ -11,7 +11,7 @@
   justify-content: center;
 }
 
-.circle-text {
+.step-text {
   flex: 1;
   text-align: center;
   font-size: 25px;
@@ -19,23 +19,15 @@
   line-height: 60px;
 }
 
-.circle-grey{
+.step-grey{
 	background: grey;
 }
 
-.circle-blue{
+.step-blue{
 	background: blue;
 }
 
-.circle-yellow{
-	background: yellow;
-}
-
-.circle-red{
-	background: red;
-}
-
-.circle-modal {
+.step-modal {
   width: 60px;
   height: 60px;
   cursor: pointer;
@@ -43,7 +35,7 @@
   font-size: 30px;
 }
 
-.circle-modal:hover {
+.step-modal:hover {
 	background-color: gold;
 }
 
@@ -218,6 +210,10 @@ article:hover {
 	cursor: pointer;
 }
 
+.step-note:hover {
+  background-color: lightblue;
+}
+
 /*Navbar*/
 @media only screen and (max-width: 1024px) {
 	.navbar {
@@ -235,5 +231,10 @@ article:hover {
 
 	#input-searcher {
 		width: 100% !important;
+	}
+
+	.step {
+		width: 40px;
+		height: 40px;
 	}
 }

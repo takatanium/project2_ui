@@ -13,7 +13,7 @@ function toggleSelectClasses (winWidth) {
   	$('#step-selector-div').removeClass('is-multiple');
   } else {
   	$('#step-selector').prop('multiple', 'true');
-  	$('#step-selector').attr('size', '8');
+  	$('#step-selector').attr('size', '9');
   	$('#step-selector-div').addClass('is-multiple');
   }
 }
