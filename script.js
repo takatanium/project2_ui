@@ -11,10 +11,16 @@ function toggleSelectClasses (winWidth) {
   	$('#step-selector').prop('multiple', false);
   	$('#step-selector').removeAttr('size');
   	$('#step-selector-div').removeClass('is-multiple');
+  	if ($('#step-selector').find('#unsel-step-selector').length === 0) {
+  	  $('#step-selector').find('option:first').remove();
+    }
   } else {
   	$('#step-selector').prop('multiple', 'true');
   	$('#step-selector').attr('size', '9');
-  	$('#step-selector-div').addClass('is-multiple');  	
+  	$('#step-selector-div').addClass('is-multiple');
+  	if ($('#step-selector').find('#unsel-step-selector').length === 0) {
+  		$('#step-selector').prepend('<option class="step-note" id="unsel-step-selector">Unselect</option>');
+  	}
   }
 }
 
