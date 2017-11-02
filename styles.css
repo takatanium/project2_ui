@@ -44,7 +44,7 @@
 }
 
 .circle-modal:hover {
-	border: solid 3px black;
+	background-color: gold;
 }
 
 .unclicked {
