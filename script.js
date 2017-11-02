@@ -11,16 +11,10 @@ function toggleSelectClasses (winWidth) {
   	$('#step-selector').prop('multiple', false);
   	$('#step-selector').removeAttr('size');
   	$('#step-selector-div').removeClass('is-multiple');
-  	if ($('#step-selector').find('#unsel-step-selector').length === 0) {
-  	  $('#step-selector').find('option:first').remove();
-    }
   } else {
   	$('#step-selector').prop('multiple', 'true');
   	$('#step-selector').attr('size', '9');
   	$('#step-selector-div').addClass('is-multiple');
-  	if ($('#step-selector').find('#unsel-step-selector').length === 0) {
-  		$('#step-selector').prepend('<option class="step-note" id="unsel-step-selector">Unselect</option>');
-  	}
   }
 }
 
@@ -51,9 +45,9 @@ $('.circle-modal').on('click', function () {
 	if ($(this).hasClass('unclicked')) {
 		if ($('#step-selector').val().length !== 0) {
       $(this).html($('#step-selector').val());
-     //  $.each($("#step-selector option:selected"), function () {
-	    //   $(this).prop('selected', false);
-	    // });
+      $.each($("#step-selector option:selected"), function () {
+	      $(this).prop('selected', false);
+	    });
 		} else {
 		  $(this).removeClass('unclicked');
 		  $(this).addClass('clicked');
@@ -77,14 +71,6 @@ $('#step-selector').on('change', function () {
 	  });
 	}
 });
-
-$('#unsel-step-selector').on('click', function () {
-  $.each($("#step-selector option:selected"), function () {
-    $(this).prop('selected', false);
-  });	
-});
-
-
 
 //Circular Nav
 (function(){
