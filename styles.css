@@ -38,6 +38,21 @@
 .circle-modal {
   width: 60px;
   height: 60px;
+  cursor: pointer;
+  color: black;
+  font-size: 30px;
+}
+
+.circle-modal:hover {
+	border: solid 3px black;
+}
+
+.unclicked {
+	border: none;
+}
+
+.clicked {
+	border: solid 3px red;
 }
 
 .searcher {
@@ -203,7 +218,12 @@ article:hover {
 	cursor: pointer;
 }
 
-/*.note-div {
-	position: relative;
-}*/
-
+/*JQuery media query*/
+.sampleClass {
+	float: left;
+}
+@media only screen and (max-width: 800px) {
+	.sampleClass {
+		float: none;
+	}
+}
