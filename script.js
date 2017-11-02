@@ -13,7 +13,7 @@ function toggleSelectClasses (winWidth) {
   	$('#step-selector-div').removeClass('is-multiple');
   } else {
   	$('#step-selector').prop('multiple', 'true');
-  	$('#step-selector').attr('size', '8');
+  	$('#step-selector').attr('size', '9');
   	$('#step-selector-div').addClass('is-multiple');  	
   }
 }
@@ -45,9 +45,9 @@ $('.circle-modal').on('click', function () {
 	if ($(this).hasClass('unclicked')) {
 		if ($('#step-selector').val().length !== 0) {
       $(this).html($('#step-selector').val());
-      $.each($("#step-selector option:selected"), function () {
-	      $(this).prop('selected', false);
-	    });
+     //  $.each($("#step-selector option:selected"), function () {
+	    //   $(this).prop('selected', false);
+	    // });
 		} else {
 		  $(this).removeClass('unclicked');
 		  $(this).addClass('clicked');
@@ -70,6 +70,12 @@ $('#step-selector').on('change', function () {
 	    $(this).prop('selected', false);
 	  });
 	}
+});
+
+$('#unsel-step-selector').on('click', function () {
+  $.each($("#step-selector option:selected"), function () {
+    $(this).prop('selected', false);
+  });	
 });
 
 
