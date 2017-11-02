@@ -5,717 +5,150 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sequencer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
-  <link rel="stylesheet" type="text/css" href="component2.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
-	<script src="modernizr-2.6.2.min.js"></script>
 </head>
 <body>
   
-  <nav class="navbar is-black">
-    <div class="navbar-brand navbar-start">
-      <a class="navbar-item brand-text navbar-start" href="">
-        PROJECT NAME          
-      </a>
-    </div>
+  <div class="navbar-fixed"> 
+    <nav>
+      <div class="nav-wrapper black">
+        <div class="col s12 m6">
+          <a href="/" class="brand-logo"><img src="" class="logo-img" alt="">Riff</a>
+        </div>        
 
-    <div class="navbar-end">
-      <div class="field is-grouped">
-        <div class="navbar-item" id="input-searcher-div">
-	        <div class="field has-addons">
-	          <div class="control" id="input-searcher">
-	            <input class="input" type="text" placeholder="Search Riffs..">
-	          </div>
-	          <a class="button is-info">
-	            <span class="icon">
-                <i class="fa fa-search"></i>
-              </span>
-	          </a>
-	        </div>
+        <div class="col s12 m6">
+          <ul class="right">          
+            <li class="link"><a href="/product">Product</a></li>     
+            <li><a href="" class="waves-effect waves-light btn yellow darken-2 grey-text text-darken-4 segment-track-login">Login</a>
+            </li>     
+          </ul>
         </div>
-        <div class="navbar-item">
-          <a class="button is-primary" href="">
-            <span class="icon">
-              <i class="fa fa-user-circle-o"></i>
-            </span>
-            <span>LOGIN</span>
-          </a>
-        </div>
+
       </div>
-    </div>
-  </nav>
-
-  <div class="section">
-
-    <div class="columns is-desktop is-gapless">
-
-      <div class="column">
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-          	<div class="overlay add-session">
-          		<div class="overlay-text"> + </div>
-          	</div>
-            <div class="content">
-            	<div class="status-bar">
-            		<i class="fa fa-star-o favorite" id="favorite" aria-hidden="true"></i>
-            	</div>
-              <p class="title">Add Riff</p>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns control-row is-flex">
-                <div class="column box control-bar"></div>
-                  <div class="control-play is-flex">
-                    <i class="fa fa-play fa-5" aria-hidden="true"></i>
-                  </div>
-                </div>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-          	<div class="overlay session">
-          		<div class="overlay-text"> + </div>
-          	</div>
-            <div class="content">
-            	<div class="status-bar">
-            		<i class="fa fa-star-o favorite" id="favorite" aria-hidden="true"></i>
-            	</div>
-              <p class="title">Riff #1</p>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns control-row is-flex">
-                <div class="column box control-bar"></div>
-                  <div class="control-play is-flex">
-                    <i class="fa fa-play fa-5" aria-hidden="true"></i>
-                  </div>
-                </div>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-          	<div class="overlay session">
-          		<div class="overlay-text"> + </div>
-          	</div>
-            <div class="content">
-            	<div class="status-bar">
-            		<i class="fa fa-star-o favorite" id="favorite" aria-hidden="true"></i>
-            	</div>
-              <p class="title">Riff #2</p>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns control-row is-flex">
-                <div class="column box control-bar"></div>
-                  <div class="control-play is-flex">
-                    <i class="fa fa-play fa-5" aria-hidden="true"></i>
-                  </div>
-                </div>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="tile is-parent">
-          <article class="tile is-child box">
-          	<div class="overlay session">
-          		<div class="overlay-text"> + </div>
-          	</div>
-            <div class="content">
-            	<div class="status-bar">
-            		<i class="fa fa-star-o favorite" id="favorite" aria-hidden="true"></i>
-            	</div>
-              <p class="title">Riff #3</p>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-                <div class="column">
-                  <div class="step step-blue"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns is-flex">
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-                <div class="column is-3">
-                  <div class="step step-grey"></div>
-                </div>
-              </div>
-              <div class="columns control-row is-flex">
-                <div class="column box control-bar"></div>
-                  <div class="control-play is-flex">
-                    <i class="fa fa-play fa-5" aria-hidden="true"></i>
-                  </div>
-                </div>
-            </div>
-          </article>
-        </div>
-      </div>
-
-    </div>
-
+    </nav>
   </div>
 
-  <div class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <i class="fa fa-star-o favorite favorite-modal" id="favorite" aria-hidden="true"></i>
-        <input class="modal-card-title input input-modal" type="text" placeholder="Riff #"></input>
-      </header>
-      <section class="modal-card-body">
-      	<div class="columns is-mobile">
+  <div class="container">
+    <div class="row">
 
-      		<div class="column is-narrow">
-						<table class="table is-narrow is-bordered" id="modal-key-table">
-						  <thead>
-						    <tr>
-						    	<th class="modal-key-table-head has-text-centered">
-						      	<abbr title="Octave">P8</abbr>
-						      </th>
-						      <th class="modal-key-table-head has-text-centered">
-						      	<abbr title="Flat">&#9837;</abbr>
-						      </th>
-						      <th class="modal-key-table-head">Key</th>
-						      <th class="modal-key-table-head has-text-centered">
-						      	<abbr title="Sharp">&#9839;</abbr>
-						      </th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						  	<tr>
-						  		<td>
-						  			<select>
-						  				<option>1</option>
-						  				<option>2</option>
-						  				<option>3</option>
-						  				<option>4</option>
-						  				<option>5</option>
-						  				<option>6</option>
-						  			</select>
-						  		</td>
-						  		<td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  		<td class="has-text-centered">C</td>
-						  	  <td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  		
-						  	</tr>
-						  	<tr>
-						  		<td>
-						  			<select>
-						  				<option>1</option>
-						  				<option>2</option>
-						  				<option>3</option>
-						  				<option>4</option>
-						  				<option>5</option>
-						  				<option>6</option>
-						  			</select>
-						  		</td>
-						  		<td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  		<td class="has-text-centered">D</td>
-						  	  <td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  	</tr>
-						  	<tr>
-						  		<td>
-						  			<select>
-						  				<option>1</option>
-						  				<option>2</option>
-						  				<option>3</option>
-						  				<option>4</option>
-						  				<option>5</option>
-						  				<option>6</option>
-						  			</select>
-						  		</td>
-						  		<td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  		<td class="has-text-centered">E</td>
-						  	  <td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  	</tr>
-						  	<tr>
-						  		<td>
-						  			<select>
-						  				<option>1</option>
-						  				<option>2</option>
-						  				<option>3</option>
-						  				<option>4</option>
-						  				<option>5</option>
-						  				<option>6</option>
-						  			</select>
-						  		</td>
-						  		<td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  		<td class="has-text-centered">F</td>
-						  	  <td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  	</tr>
-						  	<tr>
-						  		<td>
-						  			<select>
-						  				<option>1</option>
-						  				<option>2</option>
-						  				<option>3</option>
-						  				<option>4</option>
-						  				<option>5</option>
-						  				<option>6</option>
-						  			</select>
-						  		</td>
-						  		<td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  		<td class="has-text-centered">G</td>
-						  	  <td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  	</tr>
-						  	<tr>
-						  		<td>
-						  			<select>
-						  				<option>1</option>
-						  				<option>2</option>
-						  				<option>3</option>
-						  				<option>4</option>
-						  				<option>5</option>
-						  				<option>6</option>
-						  			</select>
-						  		</td>
-						  		<td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  		<td class="has-text-centered">A</td>
-						  	  <td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  	</tr>
-						  	<tr>
-						  		<td>
-						  			<select>
-						  				<option>1</option>
-						  				<option>2</option>
-						  				<option>3</option>
-						  				<option>4</option>
-						  				<option>5</option>
-						  				<option>6</option>
-						  			</select>
-						  		</td>
-						  		<td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  		<td class="has-text-centered">B</td>
-						  	  <td>
-						  			<label class="checkbox">
-                      <input type="checkbox">
-                    </label>
-                  </td>
-						  	</tr>
-						  </tbody>
-						</table>
-						<div class="columns is-gapless is-mobile">
-							<div class="column has-text-centered">
-							  <button class="button">
-							  	<img src="img/bass.png" class="percussion-icon">
-							  </button>
-						  </div>
-						  <div class="column has-text-centered">
-							  <button class="button">
-							  	<img src="img/snare.png" class="percussion-icon">
-							  </button>
-						  </div>
-						  <div class="column has-text-centered">
-							  <button class="button">
-							  	<img src="img/cymbals.png" class="percussion-icon">
-							  </button>
-						  </div>
-						</div>
-      			<!-- <div class="select is-multiple" id="step-selector-div">
-      				<select multiple size="9" id="step-selector" value=''>
-      					<option disabled selected>Selector</option>
-      					<option class="step-note" value="">Empty</option>
-      					<option class="step-note" value="C2">C2</option>
-      					<option class="step-note" value="D2">D2</option>
-      					<option class="step-note" value="E2">E2</option>
-      					<option class="step-note" value="F2">F2</option>
-      					<option class="step-note" value="G2">G2</option>
-      					<option class="step-note" value="A2">A2</option>
-      					<option class="step-note" value="B2">B2</option>
-      					<option class="step-note" value="C3">C3</option>
-      					<option class="step-note" value="D3">D3</option>
-      					<option class="step-note" value="E3">E3</option>
-      					<option class="step-note" value="F3">F3</option>
-      					<option class="step-note" value="G3">G3</option>
-      					<option class="step-note" value="A3">A3</option>
-      					<option class="step-note" value="B3">B3</option>
-      					<option class="step-note" value="C4">C4</option>
-      					<option class="step-note" value="D4">D4</option>
-      					<option class="step-note" value="E4">E4</option>
-      					<option class="step-note" value="F4">F4</option>
-      					<option class="step-note" value="G4">G4</option>
-      					<option class="step-note" value="A4">A4</option>
-      					<option class="step-note" value="B4">B4</option>
-      					<option class="step-note" value="C5">C5</option>
-      					<option class="step-note" value="D5">D5</option>
-      					<option class="step-note" value="E5">E5</option>
-      					<option class="step-note" value="F5">F5</option>
-      					<option class="step-note" value="G5">G5</option>
-      					<option class="step-note" value="A5">A5</option>
-      					<option class="step-note" value="B5">B5</option>
-      					<option class="step-note" value="C6">C6</option>
-      					<option class="step-note" value="D6">D6</option>
-      					<option class="step-note" value="E6">E6</option>
-      					<option class="step-note" value="F6">F6</option>
-      					<option class="step-note" value="G6">G6</option>
-      					<option class="step-note" value="A6">A6</option>
-      					<option class="step-note" value="B6">B6</option>
-      					<option class="step-note" value="">Empty</option>
-							</select>
-						</div> -->
-      		</div>
-
-      		<div class="column" id="step-grid">
-
-            <div class="columns is-flex">
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="1-1"></div>
+      <div class="col s12 m6 l3">
+        <div class="card modal-trigger" data-target="modal1">
+          <span class="card-title">Riff #</span>
+          <div class="card-action">
+            <div class="row">
+              <div class="col s3">
+                <div class="card-step grey"></div>
               </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="1-2"></div>
+              <div class="col s3">
+                <div class="card-step grey"></div>
               </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="1-3"></div>
+              <div class="col s3">
+                <div class="card-step grey"></div>
               </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="1-4"></div>
+              <div class="col s3">
+                <div class="card-step grey"></div>
               </div>
             </div>
-            <div class="columns is-flex">
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="2-1"></div>
+            <div class="card-control-div">
+              <div class="card-control-play">
+                <i class="material-icons card-play-icon">play_arrow</i>
               </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="2-2"></div>
-              </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="2-3"></div>
-              </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="2-4"></div>
-              </div>
+              <div class="card-control-box"></div>
             </div>
-            <div class="columns is-flex">
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="3-1"></div>
-              </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="3-2"></div>
-              </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="3-3"></div>
-              </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="3-4"></div>
-              </div>
-            </div>
-            <div class="columns is-flex">
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="4-1"></div>
-              </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="4-2"></div>
-              </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="4-3"></div>
-              </div>
-              <div class="column is-3">
-                <div class="step step-grey step-modal unclicked" id="4-4"></div>
-              </div>
-            </div>
-
-            <div class="columns modal-control-row is-flex">
-
-              <div class="column box modal-control-bar"></div>
-              <div class="play-div is-flex">
-                <div class="modal-control-play is-flex cn-button" id="cn-button">
-                  <i class="fa fa-play fa-5" aria-hidden="true"></i>
-                </div>
-                <div class="cn-wrapper" id="cn-wrapper">
-					        <ul>
-						        <li><a href="#"><span>0.25x</span></a></li>
-						        <li><a href="#"><span>0.5x</span></a></li>
-						        <li><a href="#"><span>0.75x</span></a></li>
-						        <li><a href="#"><span>1x</span></a></li>
-						        <li><a href="#"><span>1.5x</span></a></li>
-						        <li><a href="#"><span>2x</span></a></li>
-						        <li><a href="#"><span>3x</span></a></li>
-						        <li><a href="#"><span>+</span></a></li>
-						        <li><a href="#"><span>-</span></a></li>
-					        </ul>
-				        </div>
-				      </div>
-				    </div>
-			    </div>
+          </div>
 
         </div>
-      </section>
+      </div>
 
-      <footer class="modal-card-foot">
-        <button class="button is-success close-modal">Publish</button>
-        <button class="button close-modal">Cancel</button>
-        <div class="is-flex modal-footer-icons">
-        	<i class="fa fa-trash-o" aria-hidden="true"></i>
-        </div>
-      </footer>
     </div>
   </div>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="polyfills.js" src="script.js"></script>
-  <script async type="text/javascript" src="script.js"></script>
+
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <input id="modal-input" placeholder="Riff #"></input>
+      <span>created by ...</span>
+      <div class="row modal-body">
+        <div class="col s3">
+        </div>
+        <div class="col s9">
+
+          <div class="row modal-step-row">
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+          </div>
+          <div class="row modal-step-row">
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+          </div>
+          <div class="row modal-step-row">
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+          </div>
+          <div class="row modal-step-row">
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+            <div class="col s3">
+              <div class="modal-step grey"></div>
+            </div>
+          </div>
+          <div class="col offset-s1 s10 modal-control-div">
+            <div class="card-control-play">
+              <i class="material-icons card-play-icon">play_arrow</i>
+            </div>
+            <div class="modal-control-box"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="modal-buttons">
+        <a class="waves-effect waves-light btn modal-action modal-close" id="modal-publish-button">Publish</a>
+        <a class="waves-effect waves-light btn grey modal-action modal-close" id="modal-close-button">Cancel</a>
+      </div>
+    </div>
+  </div>  
+
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
